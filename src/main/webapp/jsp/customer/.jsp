@@ -71,7 +71,7 @@
                             <div style="text-align:right">
                                 <p class="mb-1">
                                     <strong>
-                                        ₹ <fmt:formatNumber value="${order.totalAmount}"
+                                        ৳ <fmt:formatNumber value="${order.totalAmount}"
                                                            type="number"
                                                            maxFractionDigits="2"/>
                                     </strong>

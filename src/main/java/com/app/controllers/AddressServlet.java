@@ -43,9 +43,9 @@ public class AddressServlet extends HttpServlet {
         addressDAO = new AddressDAOImpl();
     }
 
-    // ----------------------------------------------------
+
     // GET REQUESTS → Show addresses / load edit form
-    // ----------------------------------------------------
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -66,12 +66,12 @@ public class AddressServlet extends HttpServlet {
         String action = req.getParameter("action");
         String addressIdParam = req.getParameter("id");
 
-        // 3️⃣ IF EDIT REQUEST → LOAD ADDRESS
+        //  IF EDIT REQUEST → LOAD ADDRESS
         if ("edit".equalsIgnoreCase(action) && addressIdParam != null) {
 
             int addressId = Integer.parseInt(addressIdParam);
 
-            // ✅ SECURITY: Fetch address ONLY if it belongs to this user
+            //  SECURITY: Fetch address ONLY if it belongs to this user
             Address editAddress = addressDAO.getAddressById(addressId, userId);
 
             if (editAddress != null) {
@@ -123,9 +123,9 @@ public class AddressServlet extends HttpServlet {
             return;
         }
 
-        // ------------------------------------------------
+
         // COMMON FIELDS (Add / Update)
-        // ------------------------------------------------
+
         String street = req.getParameter("street");
         String city = req.getParameter("city");
         String state = req.getParameter("state");

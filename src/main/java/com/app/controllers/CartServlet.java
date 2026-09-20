@@ -70,9 +70,9 @@ public class CartServlet extends HttpServlet {
         }
     }
 
-    // =========================================================
+
     // VIEW CART / show Cart
-    // =========================================================
+
     private void showCart(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -113,9 +113,9 @@ public class CartServlet extends HttpServlet {
 
     }
 
-    // =========================================================
+
     // ADD ITEM TO CART
-    // =========================================================
+
     private void addItem(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
@@ -178,9 +178,9 @@ public class CartServlet extends HttpServlet {
         resp.sendRedirect("cart?action=view");
     }
 
-    // =========================================================
+
     // UPDATE ITEM QUANTITY
-    // =========================================================
+
     private void updateItem(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
@@ -204,9 +204,9 @@ public class CartServlet extends HttpServlet {
         resp.sendRedirect("cart?action=view");
     }
 
-    // =========================================================
+
     // REMOVE ITEM FROM CART
-    // =========================================================
+
     private void removeItem(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
@@ -229,9 +229,9 @@ public class CartServlet extends HttpServlet {
         resp.sendRedirect("cart?action=view");
     }
 
-    // =========================================================
+
     // CLEAR CART
-    // =========================================================
+
     private void clearCart(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
@@ -252,9 +252,9 @@ public class CartServlet extends HttpServlet {
         resp.sendRedirect("cart?action=view");
     }
 
-    // =========================================================
+
     // Utility: detect AJAX requests
-    // =========================================================
+
     private boolean isAjax(HttpServletRequest req) {
         String xhr = req.getHeader("X-Requested-With");
         return xhr != null && "XMLHttpRequest".equalsIgnoreCase(xhr);

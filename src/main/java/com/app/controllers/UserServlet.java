@@ -67,9 +67,9 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    // ----------------------------------------------------
+
     // POST Requests
-    // ----------------------------------------------------
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -100,9 +100,9 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    // ----------------------------------------------------
+
     // Registration
-    // ----------------------------------------------------
+
     private void handleRegister(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -160,9 +160,9 @@ public class UserServlet extends HttpServlet {
         forward(req, resp, "/jsp/login.jsp");
     }
 
-    // ----------------------------------------------------
+
     // Login  + RBAC
-    // ----------------------------------------------------
+
     private void handleLogin(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -206,9 +206,9 @@ public class UserServlet extends HttpServlet {
         }
     }
     
-    // ----------------------------------------------------
+
     // Logout
-    // ----------------------------------------------------
+
     private void doLogout(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
     	
@@ -220,9 +220,9 @@ public class UserServlet extends HttpServlet {
         resp.sendRedirect(req.getContextPath() + "/user?action=login");
     }
 
-    // ----------------------------------------------------
+
     // Profile
-    // ----------------------------------------------------
+
     private void showProfile(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -238,9 +238,9 @@ public class UserServlet extends HttpServlet {
         forward(req, resp, "/jsp/profile.jsp");
     }
 
-    // ----------------------------------------------------
+
     // Profile Update
-    // ----------------------------------------------------
+
     private void handleProfileUpdate(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -281,9 +281,9 @@ public class UserServlet extends HttpServlet {
     }
     
     
-    // ----------------------------------------------------
+
     // Role Checker (Optional but useful)
-    // ----------------------------------------------------
+
     @SuppressWarnings("unused")
 	private boolean hasRole(HttpServletRequest req, String requiredRole) {
         HttpSession session = req.getSession(false);
@@ -295,9 +295,9 @@ public class UserServlet extends HttpServlet {
         return role.equalsIgnoreCase(requiredRole);
     }
 
-    // ----------------------------------------------------
+
     // Utility Forward Request to JSP
-    // ----------------------------------------------------
+
     private void forward(HttpServletRequest req, HttpServletResponse resp, String path)
             throws ServletException, IOException {
         

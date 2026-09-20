@@ -58,35 +58,35 @@ public class MenuServlet extends HttpServlet {
 }
 
 /*
-===========================================================
+
  MenuServlet – JSP Mappings (Customer-Facing)
-===========================================================
+
 
 CUSTOMER URL:
-----------------------------------------------
+
 GET /menu?restaurantId={id}
     → /WEB-INF/jsp/customer/menu.jsp
 
 
 REQUIRED JSP FILES:
-----------------------------------------------
+
 📁 /WEB-INF/jsp/customer/menu.jsp
 
 
 DATA PASSED TO JSP:
-----------------------------------------------
+
 restaurant       → Restaurant object (name, rating, etc.)
 menuItems        → List<MenuItem> for that restaurant
 
 
 NOTES:
-----------------------------------------------
+
 ✔ This servlet is public → no login required.
 ✔ Only fetches & displays data (NO CRUD).
 ✔ Uses MenuItemDAO → getMenuItemsByRestaurantId()
 ✔ Uses RestaurantDAO → getRestaurantById()
 ✔ MenuItem POJO fields correctly mapped:
       name, description, price, isVeg, isAvailable, imageUrl
-===========================================================
+
 */
 

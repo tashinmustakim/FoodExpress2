@@ -76,7 +76,7 @@ public class AdminMenuServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    // ------------------------- SHOW ADD FORM -------------------------
+    //  SHOW ADD FORM
     private void showAddForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -93,7 +93,7 @@ public class AdminMenuServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    // ------------------------- SHOW EDIT FORM -------------------------
+    //  SHOW EDIT FORM
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -112,7 +112,7 @@ public class AdminMenuServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    // ------------------------- DELETE MENU ITEM -------------------------
+    //  DELETE MENU ITEM
     private void deleteMenuItem(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
@@ -127,7 +127,7 @@ public class AdminMenuServlet extends HttpServlet {
                 request.getContextPath() + "/admin/menu?action=list&restaurantId=" + restaurantId);
     }
 
-    // ------------------------- POST (SAVE/UPDATE) -------------------------
+    //  POST (SAVE/UPDATE)
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -141,7 +141,7 @@ public class AdminMenuServlet extends HttpServlet {
         }
     }
 
-    // ------------------------- SAVE NEW MENU ITEM -------------------------
+    //  SAVE NEW MENU ITEM
     private void saveMenuItem(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
@@ -162,7 +162,7 @@ public class AdminMenuServlet extends HttpServlet {
                 request.getContextPath() + "/admin/menu?action=list&restaurantId=" + menuItem.getRestaurantId());
     }
 
-    // ------------------------- UPDATE MENU ITEM -------------------------
+    //  UPDATE MENU ITEM
     private void updateMenuItem(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
@@ -192,7 +192,7 @@ public class AdminMenuServlet extends HttpServlet {
 ===========================================================
 
 URL MAPPINGS:
-----------------------------------------------
+---------------------
 GET  /admin/menu?action=list&restaurantId={id}
     → /WEB-INF/jsp/admin/menu/listMenuItems.jsp
 
@@ -213,7 +213,7 @@ POST /admin/menu?action=update
 
 
 REQUIRED JSP FILES (YOU MUST CREATE THESE):
-----------------------------------------------
+
 📁 /WEB-INF/jsp/admin/menu/listMenuItems.jsp
 📁 /WEB-INF/jsp/admin/menu/addMenuItem.jsp
 📁 /WEB-INF/jsp/admin/menu/editMenuItem.jsp

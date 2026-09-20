@@ -28,9 +28,9 @@ public class CheckoutServlet extends HttpServlet {
     private final MenuItemDAO menuItemDAO = new MenuItemDAOImpl();
     private final OrderDAO orderDAO = new OrderDAOImpl();
 
-    /* ==========================================================
+    /*
        GET  : SHOW CHECKOUT PAGE
-       ========================================================== */
+        */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -84,9 +84,9 @@ public class CheckoutServlet extends HttpServlet {
                 .forward(req, resp);
     }
 
-    /* ==========================================================
+    /*
        POST : PLACE ORDER
-       ========================================================== */
+        */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

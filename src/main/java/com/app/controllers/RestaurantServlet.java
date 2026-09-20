@@ -42,9 +42,9 @@ public class RestaurantServlet extends HttpServlet {
         restaurantDAO = new RestaurantDAOImpl();
     }
 
-    // ----------------------------------------------------
+
     // GET Requests (display pages)
-    // ----------------------------------------------------
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -95,10 +95,10 @@ public class RestaurantServlet extends HttpServlet {
 
     }
 
-    // ----------------------------------------------------
+
     // View Restaurant Details
     // URL → /restaurant?action=view&id=10
-    // ----------------------------------------------------
+
     private void showRestaurantDetails(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
@@ -143,9 +143,9 @@ public class RestaurantServlet extends HttpServlet {
         forward(req, resp, "/jsp/customer/restaurantDetails.jsp");
     }
 
-    // ----------------------------------------------------
+
     // Utility Function → forward to JSP
-    // ----------------------------------------------------
+
     private void forward(HttpServletRequest req, HttpServletResponse resp, String path)
             throws ServletException, IOException {
         RequestDispatcher rd = req.getRequestDispatcher(path);
